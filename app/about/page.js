@@ -13,8 +13,8 @@ export default async function Page() {
   const numCabins = cabins.length;
 
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
-      <div className="col-span-3">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+      <div className="md:col-span-3">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Welcome to The Wild Oasis
         </h1>
@@ -41,7 +41,7 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="md:col-span-2">
         <Image
           src={image1}
           placeholder="blur"
@@ -50,7 +50,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-2 relative aspect-square">
+      <div className="md:col-span-2 relative aspect-square">
         <Image
           src="/about-2.jpg"
           fill
@@ -59,7 +59,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-3">
+      <div className="md:col-span-3">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Managed by our family since 1962
         </h1>

@@ -24,8 +24,8 @@ function ReservationCard({ booking, onDelete }) {
   } = booking;
 
   return (
-    <div className="flex border border-primary-800">
-      <div className="relative h-32 aspect-square">
+    <div className="flex flex-col md:flex-row border rounded-md overflow-hidden border-primary-800">
+      <div className="relative min-h-32 aspect-square">
         <Image
           src={image}
           alt={`Cabin ${name}`}
@@ -34,7 +34,7 @@ function ReservationCard({ booking, onDelete }) {
         />
       </div>
 
-      <div className="flex-grow px-6 py-3 flex flex-col">
+      <div className="flex-grow gap-3 lg:gap-0 lg:px-6 px-2 py-3 flex flex-col">
         <div className="flex items-center justify-between">
           <h3 className="text-xl font-semibold">
             {numNights} nights in Cabin {name}
@@ -58,19 +58,19 @@ function ReservationCard({ booking, onDelete }) {
           ) &mdash; {format(new Date(endDate), "EEE, MMM dd yyyy")}
         </p>
 
-        <div className="flex gap-5 mt-auto items-baseline">
+        <div className="flex flex-wrap lg:flex-nowrap lg:gap-5 justify-between lg:justify-normal mt-auto items-baseline">
           <p className="text-xl font-semibold text-accent-400">${totalPrice}</p>
           <p className="text-primary-300">&bull;</p>
           <p className="text-lg text-primary-300">
             {numGuests} guest{numGuests > 1 && "s"}
           </p>
-          <p className="ml-auto text-sm text-primary-400">
+          <p className="md:ml-auto text-sm text-primary-400">
             Booked {format(new Date(created_at), "EEE, MMM dd yyyy, p")}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col border-l border-primary-800 w-[100px]">
+      <div className="flex md:flex-col border-l border-primary-800 w-[100px]">
         {!isPast(startDate) ? (
           <>
             <Link

@@ -6,7 +6,7 @@ export default async function Navigation() {
 
   return (
     <nav className="z-10 text-xl">
-      <ul className="flex gap-16 items-center">
+      <ul className="flex md:gap-16 justify-between items-center">
         <li>
           <Link
             href="/cabins"
@@ -15,6 +15,7 @@ export default async function Navigation() {
             Cabins
           </Link>
         </li>
+
         <li>
           <Link
             href="/about"
@@ -23,6 +24,7 @@ export default async function Navigation() {
             About
           </Link>
         </li>
+
         <li>
           {session?.user?.image ? (
             <Link

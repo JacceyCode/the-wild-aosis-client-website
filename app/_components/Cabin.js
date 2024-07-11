@@ -8,7 +8,7 @@ function Cabin({ cabin }) {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[3fr_4fr] lg:gap-20 gap-6 border border-primary-800 py-3 lg:px-10 px-3 mb-6 lg:mb-24">
-      <div className="relative aspect-video lg:scale-[1.15] lg:-translate-x-3">
+      <div className="relative aspect-video lg:aspect-auto lg:scale-[1.15] lg:-translate-x-3">
         <Image
           fill
           className="object-cover"
@@ -17,7 +17,7 @@ function Cabin({ cabin }) {
         />
       </div>
 
-      <div>
+      <div className="">
         <h3 className="text-accent-100 font-black lg:text-7xl text-3xl mb-5 lg:translate-x-[-254px] bg-primary-950 sm:p-6 pb-1 lg:w-[150%]">
           Cabin {name}
         </h3>
